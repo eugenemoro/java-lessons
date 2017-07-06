@@ -9,16 +9,16 @@ import java.util.ArrayList;
 public class Clinic {
 	private final ArrayList<Client> clients = new ArrayList<>();
 
-	public void addClient(final int position, final Client client){
-		clients.add(position, client);
+	public void addClient(final Client client){
+		clients.add(client);
 	}
 
 	public void addPet(String name, Animal pet){
 		this.searchClient(name).addPet(pet);
 	}
 
-	public void updateClient(String name){
-		this.searchClient(name).setId(name);
+	public void updateClient(String name, String newname){
+		this.searchClient(name).setId(newname);
 	}
 
 	public void updatePet(String name, String newName){
@@ -57,5 +57,9 @@ public class Clinic {
 			}
 		}
 		return null;
+	}
+
+	public ArrayList<Client> getClients() {
+		return clients;
 	}
 }

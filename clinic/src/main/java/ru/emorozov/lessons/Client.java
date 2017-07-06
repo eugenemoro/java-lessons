@@ -14,6 +14,13 @@ public class Client {
 		this.pets.add(pet);
 	}
 
+	public Client(){
+	}
+
+	public Client(String id){
+		this.id = id;
+	}
+
 	public Client(String id, Animal pet){
 		this.id = id;
 		this.addPet(pet);

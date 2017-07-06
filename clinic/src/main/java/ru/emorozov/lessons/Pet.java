@@ -6,5 +6,5 @@ package ru.emorozov.lessons;
 public interface Pet {
 	int id = -1;
 	String getName();
-	void setName();
+	void setName(String name);
 }
