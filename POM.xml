@@ -28,12 +28,27 @@
             <target>1.7</target>
         </configuration>
 	  </plugin>
+	  
+  	
+		<plugin> 
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jar-plugin</artifactId> 
+				<configuration> 
+					<archive> 
+						<manifest> 
+							<mainClass>ru.emorozov.clinic.ClinicRunner</mainClass>
+							<addClasspath>true</addClasspath> 
+						</manifest> 
+					</archive> 
+				</configuration> 
+		</plugin>
 	</plugins>
   </build>
   
   <modules>
 	<module>calculator</module>
 	<module>clinic</module>
+	
   </modules>
 </project>
 
